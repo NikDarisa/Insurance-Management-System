@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+    xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.AgentController" styleClass="gradient-background">
+
+    <center>
+        <TabPane>
+            <Tab text="Users">
+                <StackPane>
+                    <fx:include source="CustomerView.fxml"/>
+                </StackPane>
+            </Tab>
+            <Tab text="Policies">
+                <StackPane>
+                    <fx:include source="PolicyView.fxml"/>
+                </StackPane>
+            </Tab>
+        </TabPane>
+    </center>
+    <top>
+        <HBox>
+            <Button fx:id="logoutButton" text="Logout" onAction="#logout" />
+        </HBox>
+    </top>
+</BorderPane>

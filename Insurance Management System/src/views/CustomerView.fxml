@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.CustomerController"
+      styleClass="gradient-background">
+
+    <TableView fx:id="usersTableView" onMouseClicked="#onTableClicked">
+        <columns>
+            <TableColumn text="Username" fx:id="usernameColumn"/>
+            <TableColumn text="Role" fx:id="roleColumn"/>
+        </columns>
+    </TableView>
+    <HBox>
+        <!-- Add form fields for adding, updating, and deleting users -->
+        <Label text="Username:"/>
+        <TextField fx:id="usernameTextField"/>
+        <Label text="Password:"/>
+        <PasswordField fx:id="passwordField"/>
+        <Label text="Role:"/>
+        <ComboBox fx:id="roleComboBox">
+        </ComboBox>
+        <Button text="Add User" fx:id="addUserButton" onAction="#addUser"/>
+        <Button text="Update User" fx:id="updateUserButton" onAction="#updateUser"/>
+        <Button text="Delete User" fx:id="deleteUserButton" onAction="#deleteUser"/>
+    </HBox>
+</VBox>
