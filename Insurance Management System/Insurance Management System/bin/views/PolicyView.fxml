@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.PolicyController"
+      styleClass="gradient-background">
+
+    <TableView fx:id="policyTableView" onMouseClicked="#onTableClicked">
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn"/>
+            <TableColumn text="Name" fx:id="nameColumn"/>
+            <TableColumn text="Premium" fx:id="premiumColumn"/>
+            <TableColumn text="Payout" fx:id="payoutColumn"/>
+        </columns>
+    </TableView>
+    <HBox>
+        <!-- Add form fields for adding, updating, and deleting products -->
+        <Label text="Name:"/>
+        <TextField fx:id="policyNameTextField"/>
+        <Label text="Premium:"/>
+        <TextField fx:id="policyPremiumTextField"/>
+        <Label text="Payout:"/>
+        <TextField fx:id="policyPayoutTextField"/>
+        <Button fx:id="addButton" text="Add Policy"/>
+        <Button fx:id="updateButton" text="Update Policy"/>
+        <Button fx:id="deleteButton" text="Delete Policy"/>
+    </HBox>
+</VBox>
